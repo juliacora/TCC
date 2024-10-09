@@ -1,0 +1,312 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    ---branco: white;
+    ---azul-base: rgba(19, 18, 55, 1);
+    ---cinza-claro: rgba(217, 217, 217, 1);
+    ---amarelo: rgba(255, 164, 29, 1);
+}
+
+  /* -------------------fontes-------------------- */
+
+.dm-serif-display-regular {
+    font-family: "DM Serif Display", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  body {
+    margin: 0;
+    font-family: "DM Serif Display", serif;
+    background-color: var(---azul-base);
+    color: var(---amarelo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+  /*---------------------header--------------------*/
+
+header {
+    display: flex;
+    padding: 0%;
+    background-color: var(---azul-base);
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.menu-icon {
+    position: absolute;
+    right: -5%;
+    font-size: 4em;
+    cursor: pointer;
+    color: var(---amarelo);
+    z-index: 1;
+}
+
+.menu-items {
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    position: absolute;
+    padding-top: 20vh;
+    right: 100%;
+    background-color: var(---cinza-claro);
+    color: var(---azul-base);
+    height: 80vh;
+    border-radius: 2px;
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    width: 15vw;
+}
+
+.menu-items a {
+    font-family: "DM Serif Display", serif;
+    font-weight: bold;
+    font-size: 20px;
+    display: block;
+    color: var(---azul-base);
+    padding: 15%;
+    text-decoration:none;
+    width: 100%;
+}
+
+.menu-items a:hover {
+    background-color: var(---branco);
+}
+
+.audio-controls {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10%;
+}
+
+.play-button {
+    background-color: var(---amarelo);
+    border: none;
+    border-radius: 10px;
+    padding:5%;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+
+.slider {
+    appearance: none;
+    width: 25vw;
+    height: 1vh;
+    background: var(---amarelo);
+    outline: none;
+    opacity: 0.7;
+    margin-left: 10%;
+    border-radius: 10px;
+}
+
+#img-volume{
+    font-size: 1.2em;
+    margin-left: 10%;
+    width: 3vw;
+}
+
+.sobre-button {
+    background-color: var(---amarelo);
+    border: none;
+    border-radius: 10px;
+    padding: 5% 10%;
+    cursor: pointer;
+    font-size: 1.5em;
+    font-family: "DM Serif Display", serif;
+    font-weight: bolder;
+    color: var(---azul-base);
+    text-decoration: none;
+}
+
+/* #img-barra-amarela{
+    display: flex;
+    width: 80%;
+} */
+
+  /*---------------------main--------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(---azul-base);
+    /* height: 100vh; */
+}
+
+#section1{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo {
+    font-family: "DM Serif Display", "serif";
+    font-size: 100px;
+    color: var(---amarelo);
+    padding: 5vh;
+}
+
+.tituloFav {
+    font-family: "DM Serif Display", "serif";
+    font-size: 50px;
+    color: var(---amarelo);
+    padding: 3vh;
+}
+
+.subtitulo {
+    font-family: "DM Serif Display", "serif";
+    font-size: 35px;
+    font-weight: bold;
+    color: var(---cinza-claro);
+    padding: 3vh;
+}
+
+.subtituloFav {
+    font-family: "DM Serif Display", "serif";
+    font-size: 25px;
+    font-weight: bold;
+    color: var(---cinza-claro);
+}
+
+.subtituloImp {
+    font-family: "DM Serif Display", "serif";
+    font-size: 25px;
+    font-weight: bold;
+    color: var(---cinza-claro);
+    padding: 3vh;
+}
+
+#section2 {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#card {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+    background-color: var(---amarelo);
+    border-radius: 10px;
+    padding: 3vh;
+    width: 15vw;
+    height: auto;
+    color: var(---azul-base);
+    font-weight: bold;
+    text-decoration: none;
+    
+}
+#cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+#card h1{
+    font-size: clamp(auto, 5rem, 28px);
+}
+
+#fav {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3vh;
+}
+
+.titulologincadastro {
+    font-family: "DM Serif Display", "serif";
+    font-size: 100px;
+    color: var(---amarelo);
+    padding: 0vh;
+}
+
+#sectionlogincadastro{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subtitulologincadastro1 {
+    font-family: "DM Serif Display", "serif";
+    font-size: 50px;
+    font-weight: bold;
+    color: var(---amarelo);
+    padding: 2vh;
+}
+
+.subtitulologincadastro2 {
+    font-family: "DM Serif Display", "serif";
+    font-size: 20px;
+    font-weight: bold;
+    color: var(---cinza-claro);
+    padding: 1vh;
+}
+
+#enviar-cadastro-usuario {
+    width: 10%;
+    background-color: var(---amarelo);
+    border: none;
+    border-radius: 10px;
+    padding: 1.5%;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#entrar-usuario {
+    width: 10%;
+    background-color: var(---amarelo);
+    border: none;
+    border-radius: 10px;
+    padding: 1.5%;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+#japossuoconta {
+    display: flex;
+    padding: 2%;
+    font-size: 20px;
+    color: var(---amarelo);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.input {
+    width: 25%; /* Input ocupa 100% da largura do formulário */
+    padding: 1rem; /* Espaçamento interno de 1rem */
+    margin: 0.5rem 0; /* Margem de 0.5rem em cima e embaixo */
+    font-size: 1rem; /* Tamanho da fonte relativo ao tamanho de fonte raiz */
+    color: var(---azul-base);
+    background-color: var(---branco);
+    border: 1px solid ---branco;
+    border-radius: 0.5rem; /* Borda arredondada de 0.5rem */
+}
+
+.input:focus {
+    border-color: #66afe9;
+    outline: none;
+    box-shadow: 0 0 0.5rem rgba(102, 175, 233, 0.5);
+}
+
+#trocarconta {
+    display: flex;
+    padding: 2%;
+    font-size: 20px;
+    color: var(---amarelo);
+    cursor: pointer;
+    text-decoration: none;
+}
