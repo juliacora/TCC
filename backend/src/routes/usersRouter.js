@@ -20,9 +20,76 @@ const {
 
 
 // Criar os endpoints (rotas) que serão acessados a partir dos métodos HTTP (get,post,put,delete)
-router.get('/users', listUsers);
+
+/**
+* @swagger
+* /users/list:
+*  get:
+*   summary: Retorta todas as tarefas
+*   responses:
+*    200:
+*     description: Uma lista de tarefas
+*     content:
+*      application/json:
+*       schema:
+*        type: array
+*        items:
+*         type: object
+*/
+router.get('/users/list', listUsers);
+
+/**
+  @swagger
+* /store/user:
+*  post:
+*   summary:  Cadastra uma nova tarefa
+*   responses:
+*    200:
+*     description: Sucesso!
+*     content:
+*      application/json:
+*       schema:
+*        type: array
+*        items:
+*         type: object
+*/
 router.post('/store/user', storeUser);
+
+ /**
+  @swagger
+  * /user/:id:
+  *  put:
+  *   summary:  Atualiza uma tarefa pelo id
+  *   responses:
+  *    200:
+  *     description: Uma lista de tarefas
+  *     content:
+  *      application/json:
+  *       schema:
+  *        type: array
+  *        items:
+  *         type: object
+  */
+
 router.put('/user/:id', updateUser);
+
+  /**
+  @swagger
+* /user/delete:
+*  delete:
+*   summary:  Deleta uma tarefa pelo id
+*   responses:
+*    200:
+*     description: Uma lista de tarefas
+*     content:
+*      application/json:
+*       schema:
+*        type: array
+*        items:
+*         type: object
+*/
+  
 router.delete('/user/:id', deleteUser);
+
 
 module.exports = router;
